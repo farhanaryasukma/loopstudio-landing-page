@@ -32,7 +32,7 @@ font-family: 'Josefin Sans', sans-serif;
 
 .container {
     margin: 0 auto 0;
-    max-width: 74rem;
+    max-width: 70rem;
 }
 .navbar {
     display: flex;
@@ -59,7 +59,7 @@ font-family: 'Josefin Sans', sans-serif;
 
 .tagline-box {
     margin-top: 12rem;
-    max-width: 50%;
+    max-width: 40rem;
     height: 50%;
     border-style: solid;
     border-color: white;
@@ -67,7 +67,7 @@ font-family: 'Josefin Sans', sans-serif;
 }
 .tagline-text {
     color: #f2f2f2;
-    font-size: 5rem;
+    font-size: 5em;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 100;
     text-transform: uppercase;
@@ -86,15 +86,83 @@ font-family: 'Josefin Sans', sans-serif;
     padding: 6rem;
 }
 
+.flex {
+    display: flex;
+}
+
+.about-img-box {
+    max-width: 40rem;
+    min-width: 35rem;
+    height: auto;
+}
 .about-img {
     max-width: 100%;
     height: auto;
 }
 
 .about-text {
-    max-width: 100%;
+    background-color: white;
+    align-self: flex-end;
+    max-width: 30rem;
+    padding: 4rem 5rem 0;
+    margin-left: -5rem;
 }
 
+.about-text h2 {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+}
 .about-text p {
     color: gray;
+}
+
+#section-3 {
+    padding: 6rem;
+}
+.grid {
+    display: grid;
+    align-items: center;
+    gap: 10px;
+    grid-template-areas: 
+    'creation button'
+    'album album';
+}
+
+.grid .button {
+    justify-self: right;
+    align-self: center;
+}
+
+.grid .button button {
+    font-family: 'Alata', sans-serif;
+    font-size: 1.2rem;
+    text-decoration: none;
+    background: none;
+    padding: 0.5rem 2rem;
+}
+
+.grid h2 {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+}
+
+.grid .album {
+    grid-area: album;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.album figure {
+    position: relative;
+}
+
+figure figcaption {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 3rem;
+    text-transform: uppercase;
+    position: absolute;
+    color: #f2f2f2;
+    bottom: 1rem;
+    left: 1rem;
 }
