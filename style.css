@@ -177,10 +177,11 @@ footer {
     display: grid;
     grid-template-areas: 
     'brand-name social-media-logo'
-    'nav-link';
+    'nav-link reserved'
+    'attribution attribution';
 }
 
-footer a {
+.grid-footer .nav-link a {
     float: left;
     color: #f2f2f2;
     text-align: center;
@@ -191,7 +192,32 @@ footer a {
 
 .grid-footer .brand-name {
     grid-area: brand-name;
+    text-align: left;
 }
 .grid-footer .social-media-logo {
     grid-area: social-media-logo;
+    display: flex;
+    gap: 1rem;
+    justify-content: end;
+    
+}
+.grid-footer .nav-link {
+    grid-area: nav-link;
+    margin-left: 0;
+}
+.grid-footer .all-right-reserved {
+    grid-area: reserved;
+    text-align: right;
+    align-self: center;
+}
+
+.grid-footer .attribution {
+    grid-area: attribution;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.attribution a {
+    color: #f2f2f2;
+    text-decoration: none;
 }
