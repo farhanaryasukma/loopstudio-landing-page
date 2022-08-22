@@ -38,7 +38,6 @@ font-family: 'Josefin Sans', sans-serif;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    max-width: 80%;
 }
 
 .navbar .brand-name {
@@ -54,6 +53,9 @@ font-family: 'Josefin Sans', sans-serif;
     font-size: 17px;
 }
 
+.nav-link {
+    margin-left: auto;
+}
 
 .tagline-box {
     margin-top: 12rem;
@@ -78,4 +80,21 @@ font-family: 'Josefin Sans', sans-serif;
     font-size: var(--bs-nav-link-font-size);
     font-weight: var(--bs-nav-link-font-weight);
     color: black!important;
+}
+
+#section-2 {
+    padding: 6rem;
+}
+
+.about-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.about-text {
+    max-width: 100%;
+}
+
+.about-text p {
+    color: gray;
 }
