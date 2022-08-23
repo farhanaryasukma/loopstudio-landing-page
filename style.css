@@ -7,6 +7,10 @@
     margin: 0;
 }
 
+:root {
+    --fs-xl: clamp(3.5rem,)
+}
+
 body {
     margin: 0 auto;
     max-width: 1440px;
@@ -59,7 +63,8 @@ font-family: 'Josefin Sans', sans-serif;
 
 .tagline-box {
     margin-top: 12rem;
-    max-width: 40rem;
+    max-width: 30rem;
+    min-width: 20rem;
     height: 50%;
     border-style: solid;
     border-color: white;
@@ -67,11 +72,10 @@ font-family: 'Josefin Sans', sans-serif;
 }
 .tagline-text {
     color: #f2f2f2;
-    font-size: 5em;
+    font-size: clamp(0.5rem, 3rem, 5rem);
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 100;
     text-transform: uppercase;
-
 }
 
 .nav-link {
@@ -88,22 +92,27 @@ font-family: 'Josefin Sans', sans-serif;
 
 .flex {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .about-img-box {
-    max-width: 40rem;
-    min-width: 35rem;
-    height: auto;
+    /* height: auto; */
+    min-width: 200px;
+    max-width: 600px;
+    justify-content: center;
+    align-items: center;
 }
 .about-img {
-    max-width: 100%;
+   width: 100%;
     height: auto;
 }
 
 .about-text {
     background-color: white;
-    align-self: flex-end;
-    max-width: 30rem;
+    text-align: center;
+    max-width: 600px;
+    min-width: 200px;
     padding: 4rem 5rem 0;
     margin-left: -5rem;
 }
@@ -197,7 +206,7 @@ figure figcaption {
 footer {
     background-color: black;
     color: #f2f2f2;
-    padding: 2.5rem 0 0;
+    padding: 2.5rem 2rem 0;
 }
 
 .grid-footer {
