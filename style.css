@@ -11,7 +11,7 @@ body {
     margin: 0 auto;
     max-width: 1440px;
     position: relative;
-    box-shadow:  34px 40px 12px rgb(0 0 0 / 20%)
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
 
 p, a {
@@ -117,7 +117,7 @@ font-family: 'Josefin Sans', sans-serif;
 }
 
 #section-3 {
-    padding: 6rem;
+    padding: 3rem;
 }
 .grid {
     display: grid;
@@ -149,12 +149,19 @@ font-family: 'Josefin Sans', sans-serif;
 .grid .album {
     grid-area: album;
     display: grid;
+    width: 100%;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
 .album figure {
     position: relative;
+}
+
+.album .mobile {
+    display: none;
 }
 
 figure figcaption {
@@ -166,6 +173,26 @@ figure figcaption {
     bottom: 1.7rem;
     left: 1rem;
 }
+
+@media only screen and (max-width: 1200px) {
+    .album {
+        display: grid;
+    grid-template-columns: repeat(2, 1fr)!important;
+    align-items: center;
+    justify-items: center;
+    }
+    
+    .album .desktop {
+        display: none;
+    }
+    .album .mobile {
+        display: inline-block;
+    }
+
+    .mobile img {
+        width: 100%;
+    }
+  }
 
 footer {
     background-color: black;
@@ -185,7 +212,6 @@ footer {
     float: left;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
 }
@@ -202,7 +228,10 @@ footer {
     
 }
 .grid-footer .nav-link {
+    display: flex;
     grid-area: nav-link;
+    padding-top: .5rem;
+    gap: 2rem;
     margin-left: 0;
 }
 .grid-footer .all-right-reserved {
@@ -215,6 +244,7 @@ footer {
     grid-area: attribution;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
+    padding-top: 1rem;
 }
 
 .attribution a {
